@@ -72,10 +72,17 @@ str(steps1)
 
 ```r
 library (ggplot2)
+```
+
+```
+## Warning: package 'ggplot2' was built under R version 3.2.2
+```
+
+```r
 ggplot(steps1 , aes(x = steps)) + geom_histogram(color = "black", fill = "red", binwidth = 1000) + labs(title="Steps Taken per Day Plot", x = "Steps per day", y = "Times per day") + theme_grey()
 ```
 
-![plot of chunk plotting1](figure/plotting1-1.png?raw=true) 
+![plot of chunk plotting1](figure/plotting1-1.png) 
 
 ### Calculate and report the mean and median of the total number of steps taken per day
 
@@ -113,7 +120,7 @@ library(ggplot2)
 ggplot(steps2, aes(x=interval, y=steps)) + geom_line(color="purple", size= 2 ) + labs(title="Average daily activity pattern", x ="5 minute interval", y = "average No. of steps taken") + theme_grey()
 ```
 
-![plot of chunk plotting 2](figure/plotting 2-1.png?raw=true) 
+![plot of chunk plotting 2](figure/plotting 2-1.png) 
 
 ### Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -197,7 +204,7 @@ library(ggplot2)
 ggplot(newdata, aes(x = steps)) +  geom_histogram(color = "black" , fill = "yellow", binwidth = 1000) +  labs(title="Plot: Total number of steps taken each day",  x = "No. steps a day", y = "No. times in each day") + theme_grey()
 ```
 
-![plot of chunk plotting 3](figure/plotting 3-1.png?raw=true) 
+![plot of chunk plotting 3](figure/plotting 3-1.png) 
 
 ###calculating  and reporting the mean and median total number of steps taken per day
 
@@ -270,7 +277,7 @@ library (ggplot2)
 ggplot(data_weekdays, aes(x=interval, y=steps)) +  geom_line(color="blue", size= 2) +  facet_wrap(~ dayofweek, nrow=2, ncol=1) + labs(x="5 minute interval", y="No. steps") + theme_grey()
 ```
 
-![plot of chunk plotting 4](figure/plotting 4-1.png?raw=true) 
+![plot of chunk plotting 4](figure/plotting 4-1.png) 
 
 it seems that activity on the weekdays has the highest peak in terms of step intervals. Also, weekends activities has more peaks over a hundred than weekdays.
 
